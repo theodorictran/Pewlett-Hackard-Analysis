@@ -36,8 +36,7 @@ CREATE TABLE titles(
 	title VARCHAR(40) NOT NULL,
 	from_date DATE NOT NULL,
 	to_date DATE NOT NULL,
-	FOREIGN KEY (emp_no) REFERENCES employees(emp_no),
-	PRIMARY KEY (emp_no)
+	FOREIGN KEY (emp_no) REFERENCES employees(emp_no)
 );
 CREATE TABLE dept_emp(
 	dept_no VARCHAR(4) NOT NULL,
@@ -46,5 +45,4 @@ CREATE TABLE dept_emp(
 	to_date DATE,
 	FOREIGN KEY (dept_no) REFERENCES departments (dept_no),
 	FOREIGN KEY (emp_no) REFERENCES employees (emp_no),
-	PRIMARY KEY (dept_no)
 );
